@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<script type="text/javascript">
+     
+    var produtos = [];
+
+   function cadastroProduto(codigo,nome,valor){
+
+     return {codigo : codigo, nome : nome, valor : valor};
+   }
+
+
+   function apresentarRelatorio(){
+   	for (var i = 0; i < produtos.length; i++) {
+   		alert("nome: " + produtos[i].nome);
+   		alert("valor: "+ produtos[i].valor);
+
+   	};
+   }
+
+     do{
+      var novoProduto = cadastroProduto(prompt("informe codigo "), prompt("informe nome: "), prompt("iforme valor: "));
+      produtos.push(novoProduto);
+
+     }while(confirm("deseja continuar? "));
+     apresentarRelatorio();
+     
+     console.log(JSON.stringify(produtos, null, 4));
+		
+
+
+   solicitarDados();
+
+
+</script>
+<body>
+</body>
+
+</html>
